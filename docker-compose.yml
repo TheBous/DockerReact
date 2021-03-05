@@ -6,11 +6,10 @@ services:
         ports:
             - 3000:3000
         # environment: 
-        #     MONGO_URL: mongodb
         #     PORT: 4000
         volumes:
-            - ./:/src/
-            - nodemodules:/src/node_modules
+            - ./:/opt/app/
+            - nodemodules:/opt/app/node_modules
 
 volumes:
     nodemodules: {}
