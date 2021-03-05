@@ -2,14 +2,14 @@ version: '3'
 services:
     app:
         build: .
-        command: yarn client:watch
+        # command: yarn client:watch
         ports:
-            - 3000:3000
+            - 80:3000
         # environment: 
         #     PORT: 4000
         volumes:
-            - ./:/opt/app/
-            - nodemodules:/opt/app/node_modules
+            - ./:/var/www/
+            - nodemodules:/var/www/node_modules
 
 volumes:
     nodemodules: {}
