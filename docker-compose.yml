@@ -9,14 +9,14 @@ services:
     # environment:
     #     PORT: 4000
     volumes:
-      - ./:/var/www/wl-hotelscan/
-      - nodemodules:/var/www/wl-hotelscan/node_modules
+      - ./:/var/www/example/
+      - nodemodules:/var/www/example/node_modules
   nginx:
     build:
       context: .
       dockerfile: Dockerfile.nginx
     volumes:
-      - ./:/var/www/wl-hotelscan/
+      - ./:/var/www/example/
     ports:
       - "80:80"
 
