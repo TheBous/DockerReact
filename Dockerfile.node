@@ -1,0 +1,15 @@
+FROM node:14-alpine
+LABEL maintainer="TheBous thebous1993@gmail.com"
+
+RUN apk add --no-cache git
+
+ADD package.json /tmp/package.json
+ADD yarn.lock /tmp/yarn.lock
+RUN echo 🚨 Install deps or get them from cache...
+RUN cd /tmp && npm i
+RUN mkdir -p /var/www/wl-hotelscan && cp -a /tmp/node_modules /var/www/wl-hotelscan
+
+WORKDIR /var/www/wl-hotelscan
+ADD . /var/www/wl-hotelscan
+
+CMD yarn start:watch
