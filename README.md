@@ -25,7 +25,12 @@ docker-compose build
 ```
 - 
 ```bash
-docker-compose up
+docker-compose up -d 
+```
+
+- To see your application logs, run this command 
+```bash
+docker logs --follow node
 ```
 
 🎉 Enjoy your easiest and cheapest way to running a React application with Docker! 🎉

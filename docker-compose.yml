@@ -1,13 +1,12 @@
 version: "3"
 services:
   node:
+    container_name: node
     build:
       context: .
       dockerfile: Dockerfile.node
     ports:
       - 3000:3000
-    # environment:
-    #     PORT: 4000
     volumes:
       - ./:/var/www/example/
       - nodemodules:/var/www/example/node_modules
