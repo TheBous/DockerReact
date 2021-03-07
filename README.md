@@ -5,7 +5,10 @@
   <br>
   <br>
 </div>
-# Docker React
+
+## Docker React
+
+🐳 ⚛️
 
 Use docker in your development frontend flow!
 This project has been created to facilitate to frontend devs to use Docker in their own projects.
